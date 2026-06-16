@@ -155,5 +155,6 @@
 (require 'llms)
 (require 'pass-config)
 (require 'everywhere)
+(require 'move-text-config)
 ;; (require 'emms-config)
 ;; (require 'workspaces)
