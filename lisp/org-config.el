@@ -60,10 +60,10 @@
 			 org-roam-db-sync
 			 org-roam-capture)
   :init
-  (setq org-roam-directory "~/docs/notes/org/roam"
-		org-roam-database-connector 'sqlite-builtin
+  (setq org-roam-directory "~/docs/notes/org/roam")
+  (setq org-roam-database-connector 'sqlite-builtin
 		org-roam-completion-everywhere t
-		org-roam-db-location (expand-file-name "org-roam.db" "~/docs/notes/org/roam")
+		org-roam-db-location (expand-file-name "org-roam.db" org-roam-directory)
 		org-roam-v2-ack t)
   :config
   (unless (file-exists-p org-roam-directory)
