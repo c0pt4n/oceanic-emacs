@@ -90,7 +90,8 @@
 	  use-short-answers t)
 
 (setq-default truncate-lines t
-			  tab-width 4)
+			  tab-width 4
+			  save-interprogram-paste-before-kill t)
 (add-hook 'before-save-hook #'delete-trailing-whitespace)
 
 (use-package which-key
