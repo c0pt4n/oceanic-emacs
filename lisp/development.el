@@ -22,19 +22,12 @@
 		  (yaml        "https://github.com/ikatyang/tree-sitter-yaml")
 		  (python      "https://github.com/tree-sitter/tree-sitter-python")
 		  (javascript  "https://github.com/tree-sitter/tree-sitter-javascript" "master" "src")))
-  :config
-  (dolist (lang treesit-language-source-alist)
-	(let ((lang-name (car lang)))
-	  (unless (treesit-language-available-p lang-name)
-		(message "Installing tree-sitter grammar for %s..." lang-name)
-		(treesit-install-language-grammar lang-name)))))
-
-(dolist (entry '(("\\.go\\'"     . go-ts-mode)
-                 ("go\\.mod\\'"  . go-mod-ts-mode)
-                 ("go\\.sum\\'"  . go-mod-ts-mode)
-                 ("\\.c\\'"      . c-ts-mode)
-                 ("\\.h\\'"      . c-ts-mode)))
-  (add-to-list 'auto-mode-alist entry))
+  (dolist (entry '(("\\.go\\'"     . go-ts-mode)
+                   ("go\\.mod\\'"  . go-mod-ts-mode)
+                   ("go\\.sum\\'"  . go-mod-ts-mode)
+                   ("\\.c\\'"      . c-ts-mode)
+                   ("\\.h\\'"      . c-ts-mode)))
+	(add-to-list 'auto-mode-alist entry)))
 
 ;; YASNIPPET
 ;; No :defer — yas-global-mode must be live before the first eglot buffer
