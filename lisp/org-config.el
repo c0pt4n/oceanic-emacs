@@ -10,14 +10,21 @@
   (setq org-edit-src-content-indentation 0
         org-hide-leading-stars           t
 		org-indent-mode                  t
-		org-return-follows-link          t))
-
-(with-eval-after-load 'org
+		org-return-follows-link          t)
   (require 'org-tempo)
   (add-to-list 'org-structure-template-alist '("el" . "src emacs-lisp"))
   (add-to-list 'org-structure-template-alist '("go" . "src go"))
   (add-to-list 'org-structure-template-alist '("sh" . "src sh"))
-  (add-to-list 'org-structure-template-alist '("py" . "src python")))
+  (add-to-list 'org-structure-template-alist '("py" . "src python"))
+  (require 'ob-shell)
+  (require 'ob-python)
+  (require 'ob-C)
+  (org-babel-do-load-languages
+   'org-babel-load-languages
+   '((shell      . t)
+     (emacs-lisp . t)
+     (python     . t)
+     (C          . t))))
 
 (use-package org-modern
   :hook (org-mode . org-modern-mode)
@@ -77,17 +84,6 @@
   :init
   (with-eval-after-load 'org
     (require 'ox-typst)))
-
-(with-eval-after-load 'org
-  (require 'ob-shell)
-  (require 'ob-python)
-  (require 'ob-C)
-  (org-babel-do-load-languages
-   'org-babel-load-languages
-   '((shell      . t)
-     (emacs-lisp . t)
-     (python     . t)
-     (C          . t))))
 
 (provide 'org-config)
 ;;; org-config.el ends here
