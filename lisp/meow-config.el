@@ -36,7 +36,7 @@
    '("f t" . (lambda () (interactive) (find-file (expand-file-name "inbox.org" org-directory))))
 
    ;; Magit
-   '("g" . (lambda () (interactive) (require 'magit) (magit-status)))
+   '("g" . magit-status)
 
    ;; Toggling keybindings
    '("o t" . om/vterm)
