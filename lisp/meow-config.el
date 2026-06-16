@@ -72,6 +72,7 @@
    '("0" . meow-digit-argument))
 
   (meow-motion-define-key
+   '("^" . back-to-indentation)
    '("x" . meow-line)
    '("e" . meow-next-word)
    '(";" . meow-reverse)
@@ -101,6 +102,7 @@
    '("." . meow-bounds-of-thing)
    '("[" . meow-beginning-of-thing)
    '("]" . meow-end-of-thing)
+   '("^" . back-to-indentation)
    '("a" . meow-append)
    '("A" . meow-open-below)
    '("b" . meow-back-word)
