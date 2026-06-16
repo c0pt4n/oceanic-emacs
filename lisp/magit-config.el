@@ -1,6 +1,6 @@
 ;;; magit-config.el --- Git integration -*- lexical-binding: t; -*-
 
-(use-package magit-section :demand t)
+(use-package magit-section)
 (elpaca-wait)
 
 (use-package magit
