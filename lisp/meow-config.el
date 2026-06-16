@@ -73,7 +73,14 @@
 
   (meow-motion-define-key
    '("x" . meow-line)
+   '("e" . meow-next-word)
+   '(";" . meow-reverse)
+   '("v" . meow-visit)
+   '("n" . meow-search)
+   '("[" . meow-beginning-of-thing)
+   '("]" . meow-end-of-thing)
    '("y" . meow-clipboard-save)
+   '("g" . meow-cancel-selection)
    '("/" . consult-line)
    '("<escape>" . ignore))
 
