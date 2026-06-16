@@ -31,7 +31,7 @@
   (pdf-tools-install :no-query)
   (setq pdf-view-display-size 'fit-page
         pdf-view-continuous t
-		pdf-view-midnight-colors '("#a4cbd4" . "#0d1117")
+		pdf-view-midnight-colors '("#d8dee9" . "#121212")
         pdf-annot-activate-created-annotations t))
 
 (provide 'pdf-setup)
