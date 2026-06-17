@@ -26,5 +26,11 @@
 (use-package rainbow-delimiters
   :hook (prog-mode . rainbow-delimiters-mode))
 
+(use-package ediff
+  :ensure nil
+  :config
+  (setq ediff-window-setup-function 'ediff-setup-windows-plain
+		ediff-split-window-function 'split-window-horizontally))
+
 (provide 'editing)
 ;;; editing.el ends here
