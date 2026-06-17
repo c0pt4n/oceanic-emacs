@@ -73,7 +73,7 @@
 
   (meow-motion-define-key
    '("^" . back-to-indentation)
-   '("x" . meow-line)
+   '("l" . meow-line)
    '("e" . meow-next-word)
    '(";" . meow-reverse)
    '("v" . meow-visit)
