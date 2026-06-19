@@ -92,6 +92,7 @@
    '("]" . meow-end-of-thing)
    '("y" . meow-clipboard-save)
    '("g" . meow-cancel-selection)
+   '("f" . flash-jump)
    '("/" . consult-line)
    '("<escape>" . ignore))
 
@@ -122,7 +123,7 @@
    '("D" . meow-backward-delete)
    '("e" . meow-next-word)
    '("E" . meow-next-symbol)
-   '("f" . meow-find)
+   '("f" . flash-jump)
    '("g" . meow-cancel-selection)
    '("G" . meow-grab)
    '("h" . meow-left)
