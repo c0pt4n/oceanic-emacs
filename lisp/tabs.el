@@ -17,7 +17,8 @@
 		centaur-tabs-cycle-scope 'tabs
 		centaur-tabs-set-bar 'left
 		centaur-tabs-set-modified-marker t)
-  (centaur-tabs-mode t))
+  (centaur-tabs-mode t)
+  (centaur-tabs-group-by-projectile-project))
 
 (provide 'tabs)
 ;;; tabs.el ends here
