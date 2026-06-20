@@ -17,5 +17,11 @@
   :init
   (global-git-gutter-mode +1))
 
+(use-package git-modes
+  :ensure t
+  :mode (("/\\.gitignore\\'" . gitignore-mode)
+         ("/\\.gitconfig\\'" . gitconfig-mode)
+         ("/\\.gitattributes\\'" . gitattributes-mode)))
+
 (provide 'magit-config)
 ;;; magit-config.el ends here
