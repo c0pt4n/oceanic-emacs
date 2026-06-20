@@ -92,6 +92,7 @@
 	  display-line-numbers-type 'relative
 	  make-backup-files nil
 	  auto-save-default nil
+	  create-lockfiles nil
 	  native-comp-async-report-warnings-errors 'silent ;; Native Comp
 	  use-short-answers t)
 
