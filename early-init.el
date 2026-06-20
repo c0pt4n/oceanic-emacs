@@ -2,6 +2,8 @@
 
 (setq package-enable-at-startup nil)
 
+(add-to-list 'default-frame-alist '(alpha-background . 90))
+
 ;;; Fonts
 (set-face-attribute 'default nil
 					:family "IBM Plex Mono"
