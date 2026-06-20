@@ -5,6 +5,8 @@
   :hook
   (special-mode . centaur-tabs-local-mode)
   (calendar-mode . centaur-tabs-local-mode)
+  (emms-playlist-mode . centaur-tabs-local-mode)
+  (emms-browser-mode . centaur-tabs-local-mode)
   :bind
   ("C-<iso-lefttab>" . centaur-tabs-backward)
   ("C-<tab>" . centaur-tabs-forward)
