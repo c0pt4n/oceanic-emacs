@@ -23,6 +23,11 @@
   (python-indent-guess-indent-offset nil)
   (python-indent-offset 4))
 
+(use-package rainbow-mode
+  :hook ((prog-mode . rainbow-mode)
+		 (emacs-lisp-mode . rainbow-mode)
+		 (org-mode . rainbow-mode)))
+
 (use-package rainbow-delimiters
   :hook (prog-mode . rainbow-delimiters-mode))
 
