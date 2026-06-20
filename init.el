@@ -93,6 +93,7 @@
 	  make-backup-files nil
 	  auto-save-default nil
 	  create-lockfiles nil
+	  initial-scratch-message nil
 	  native-comp-async-report-warnings-errors 'silent ;; Native Comp
 	  use-short-answers t)
 
