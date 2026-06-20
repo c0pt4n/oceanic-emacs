@@ -157,5 +157,6 @@
 (require 'pass-config)
 (require 'everywhere)
 (require 'move-text-config)
+(require 'tabs)
 ;; (require 'workspaces)
 (require 'emms-config)
