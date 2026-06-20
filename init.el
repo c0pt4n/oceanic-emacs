@@ -88,7 +88,7 @@
 (column-number-mode 1)
 (global-auto-revert-mode 1)
 
-(setq scroll-margin 8
+(setq scroll-margin 2
 	  display-line-numbers-type 'relative
 	  make-backup-files nil
 	  auto-save-default nil
