@@ -79,11 +79,11 @@
 		org-roam-ui-open-on-start nil))
 
 (use-package ox-typst
-  :ensure t
+  :ensure (ox-typst :host github :repo "jmpunkt/ox-typst")
   :commands (org-export-dispatch)
   :init
   (with-eval-after-load 'org
-    (require 'ox-typst)))
+    (add-to-list 'org-export-backends 'typst)))
 
 (provide 'org-config)
 ;;; org-config.el ends here
