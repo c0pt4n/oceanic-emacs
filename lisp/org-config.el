@@ -47,9 +47,9 @@
   :hook ((org-mode . org-download-enable)
 		 (dired-mode    . org-download-enable))
   :config
-  (setq-default org-download-image-dir "~/docs/notes/org/attachments")
-  (setq org-download-heading-lvl nil)
-  (setq org-download-timestamp "%Y%m%d-%H%M%S_"))
+  (setq-default org-download-image-dir (expand-file-name "attachments" org-directory))
+  (setq org-download-heading-lvl nil
+        org-download-timestamp "%Y%m%d-%H%M%S_"))
 
 (use-package org-roam
   :hook (org-mode . org-roam-db-autosync-mode)
