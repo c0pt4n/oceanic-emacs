@@ -2,8 +2,8 @@
 
 (use-package flash
   :custom
-  (setq flash-autojump t
-		flash-search-folds t)
+  (flash-autojump t)
+  (flash-search-folds t)
   :config
   (require 'flash-isearch)
   (flash-isearch-mode 1))
