@@ -16,7 +16,9 @@
 		centaur-tabs-icon-type 'nerd-icons
 		centaur-tabs-gray-out-icons 'buffer
 		centaur-tabs-cycle-scope 'tabs
-		centaur-tabs-set-bar 'left
+		;;centaur-tabs-set-bar 'left
+		centaur-tabs-set-bar 'under
+		x-underline-at-descent-line t
 		centaur-tabs-set-modified-marker t)
   (centaur-tabs-mode t)
   (centaur-tabs-group-by-projectile-project))
