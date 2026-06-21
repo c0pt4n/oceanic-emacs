@@ -69,6 +69,8 @@
    '("w j" . windmove-down)
    '("w h" . windmove-left)
 
+   '("y y" . om/clipboard-manager)
+
    ;; Use SPC (0-9) for digit arguments.
    '("1" . meow-digit-argument)
    '("2" . meow-digit-argument)

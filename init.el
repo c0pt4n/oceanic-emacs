@@ -139,6 +139,7 @@
 	(add-to-list 'savehist-additional-variables var)))
 
 (add-to-list 'load-path (expand-file-name "lisp/" user-emacs-directory))
+(add-to-list 'load-path (expand-file-name "lisp/custom/" user-emacs-directory))
 
 (require 'meow-config)
 (require 'flash-config)
@@ -163,3 +164,5 @@
 (require 'tabs)
 ;; (require 'workspaces)
 (require 'emms-config)
+;; Custom
+(require 'om-clipboard-manager)
