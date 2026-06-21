@@ -167,7 +167,7 @@
   :init
   (setq meow-keypad-meta-prefix ?M)
   (setq meow-keypad-ctrl-meta-prefix ?G)
-  (setq meow-cursor-type-insert 'box)
+  ;;(setq meow-cursor-type-insert 'box)
   :config
   (add-to-list 'meow-mode-state-list '(vterm-mode . insert))
   (meow-setup)
