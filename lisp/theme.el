@@ -10,8 +10,8 @@
 (use-package nordic-night-theme
   :init
   (if (daemonp)
-	  (add-hook 'after-make-frame-functions #'oceanic/apply-theme))
-  (load-theme 'nordic-night t))
+	  (add-hook 'after-make-frame-functions #'oceanic/apply-theme)
+  (load-theme 'nordic-night t)))
 
 (provide 'theme)
 ;;; theme.el ends here
