@@ -4,6 +4,15 @@
 
 (add-to-list 'default-frame-alist '(alpha-background . 90))
 
+;; UTF-8
+(set-language-environment "UTF-8")
+(set-charset-priority 'unicode)
+(setq locale-coding-system 'utf-8)
+(set-terminal-coding-system 'utf-8)
+(set-keyboard-coding-system 'utf-8)
+(set-selection-coding-system 'utf-8)
+(prefer-coding-system 'utf-8)
+
 ;;; Fonts
 (set-face-attribute 'default nil
 					:family "IBM Plex Mono"
