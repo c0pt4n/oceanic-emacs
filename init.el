@@ -141,6 +141,12 @@
 (add-to-list 'load-path (expand-file-name "lisp/" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "lisp/custom/" user-emacs-directory))
 
+(defvar is-android-env
+  (or (eq system-type 'android)
+      (string-match-p "android" system-configuration)
+      (getenv "TERMUX_VERSION"))
+  "Non-nil if running on Android/Termux.")
+
 (require 'meow-config)
 (require 'flash-config)
 (require 'dashboard)
@@ -150,19 +156,21 @@
 (require 'org-config)
 (require 'theme)
 (require 'magit-config)
-(require 'pdf-setup)
 (require 'completion)
 (require 'editing)
 (require 'development)
 (require 'persist)
 (require 'markdown)
 (require 'tramp-config)
-(require 'llms)
-(require 'pass-config)
 (require 'everywhere)
 (require 'move-text-config)
 (require 'tabs)
 ;; (require 'workspaces)
 (require 'emms-config)
-;; Custom
-(require 'om-clipboard-manager)
+
+(unless is-android-env
+  (require 'pdf-setup)
+  (require 'pass-config)
+  (require 'llms)
+  ;; Custom
+  (require 'om-clipboard-manager))
