@@ -40,13 +40,13 @@
 
    ;; Emms
    '("m u" . oceanic/update-emms-from-mpd)
+   '("m d" . emms-add-directory-tree)
    '("m o" . emms-browser)
    '("m p" . emms-playlist-mode-go)
+   '("m s" . emms-stop)
    '("m x" . emms-pause)
    '("m b" . emms-previous)
    '("m n" . emms-next)
-   '("m r t" . emms-toggle-repeat-track)
-   '("m r p" . emms-toggle-repeat-playlist)
 
    ;; Toggling keybindings
    '("o t" . om/vterm)
