@@ -6,7 +6,9 @@
   (emms-playlist-mode . meow-insert-mode)
   :bind (:map emms-browser-mode-map
 			  ("_"   . emms-volume-lower)
-			  ("RET" . emms-browser-add-tracks-and-play))
+			  ("RET" . emms-browser-add-tracks-and-play)
+			  :map emms-playlist-mode-map
+			  ("_"   . emms-volume-lower))
   :commands (emms
 			 emms-browser
 			 emms-playlist-mode-go
