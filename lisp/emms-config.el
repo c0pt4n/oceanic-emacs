@@ -34,7 +34,7 @@
         emms-source-file-directory-tree-function 'emms-source-file-directory-tree-find)
 
   ;; MPD
-  (setq emms-player-mpd-music-directory (expand-file-name "~/music")
+  (setq emms-player-mpd-music-directory "~/music"
         emms-volume-change-function #'emms-volume-mpd-change
         emms-player-list '(emms-player-mpd
 						   emms-player-mplayer
