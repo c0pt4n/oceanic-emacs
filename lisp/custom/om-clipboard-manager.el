@@ -8,7 +8,8 @@
       ;; Decode each entry to get full content
       (delq nil
             (mapcar (lambda (line)
-                      (when (string-match "^\\([0-9]+\\)\t" line)
+                      (when (and (string-match "^\\([0-9]+\\)\t" line)
+                                 (not (string-match-p "\\[\\[ binary" line)))
                         (let ((id (match-string 1 line)))
                           (string-trim (shell-command-to-string
                                         (format "cliphist decode %s" id))))))
@@ -24,8 +25,8 @@ The full, untruncated text is always copied - truncation is only for display."
          (all-items (delete-dups (append cliphist-items kill-ring-items)))
          (candidates (mapcar (lambda (item)
                                (let ((display (truncate-string-to-width
-                                             (replace-regexp-in-string "\n" " " item)
-                                             80 nil nil "...")))
+                                               (replace-regexp-in-string "\n" " " item)
+                                               80 nil nil "...")))
                                  (cons display item)))
                              all-items))
          (selected (consult--read
