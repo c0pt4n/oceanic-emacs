@@ -1,7 +1,6 @@
 ;;; pdf-setup.el --- Open PDF in Emacs -*- lexical-binding: t; -*-
 
 (use-package pdf-tools
-  :ensure t
   :magic ("%PDF" . pdf-view-mode)
   :hook (pdf-view-mode . (lambda ()
 						   (pdf-view-midnight-minor-mode 1)

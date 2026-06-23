@@ -11,7 +11,6 @@
   (dired-auto-revert-buffer t))
 
 (use-package dirvish
-  :ensure t
   :init
   (dirvish-override-dired-mode)
   :custom

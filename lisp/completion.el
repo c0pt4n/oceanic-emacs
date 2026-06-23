@@ -7,14 +7,12 @@
   (vertico-cycle t))
 
 (use-package marginalia
-  :ensure t
   :init
   (marginalia-mode 1))
 
 (elpaca-wait)
 
 (use-package orderless
-  :ensure t
   :custom
   (completion-styles '(orderless basic))
   (completion-category-defaults nil)
@@ -34,13 +32,11 @@
    :preview-key '(:debounce 0.4 any)))
 
 (use-package embark
-  :ensure t
   :bind
   (("C-." . embark-act)
    ("C-;" . embark-dwim)))
 
 (use-package embark-consult
-  :ensure t
   :after (embark consult)
   :hook
   (embark-collect-mode . consult-preview-at-point-mode))
@@ -50,7 +46,6 @@
   (nerd-icons-completion-mode))
 
 (use-package corfu
-  :ensure t
   :custom
   (corfu-auto        t)
   (corfu-auto-delay  0)
@@ -69,7 +64,6 @@
 ;; Global fallback capfs for non-eglot buffers.
 ;; eglot-managed buffers get their own stack rebuilt in grammars.el.
 (use-package cape
-  :ensure t
   :init
   (add-to-list 'completion-at-point-functions #'cape-dabbrev)
   (add-to-list 'completion-at-point-functions #'cape-file)

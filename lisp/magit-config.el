@@ -18,7 +18,6 @@
   (global-git-gutter-mode +1))
 
 (use-package git-modes
-  :ensure t
   :mode (("/\\.gitignore\\'" . gitignore-mode)
          ("/\\.gitconfig\\'" . gitconfig-mode)
          ("/\\.gitattributes\\'" . gitattributes-mode)))
