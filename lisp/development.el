@@ -11,7 +11,8 @@
 		  (json-mode       . json-ts-mode)
 		  (python-mode     . python-ts-mode)
 		  (yaml-mode       . yaml-ts-mode)
-		  (javascript-mode . js-ts-mode)))
+		  (javascript-mode . js-ts-mode)
+		  (dockerfile-mode . dockerfile-ts-mode)))
   (setq treesit-language-source-alist
 		'((c           "https://github.com/tree-sitter/tree-sitter-c")
 		  (go          "https://github.com/tree-sitter/tree-sitter-go")
@@ -21,12 +22,14 @@
 		  (json        "https://github.com/tree-sitter/tree-sitter-json")
 		  (yaml        "https://github.com/ikatyang/tree-sitter-yaml")
 		  (python      "https://github.com/tree-sitter/tree-sitter-python")
-		  (javascript  "https://github.com/tree-sitter/tree-sitter-javascript" "master" "src")))
+		  (javascript  "https://github.com/tree-sitter/tree-sitter-javascript" "master" "src")
+		  (dockerfile  "https://github.com/camdencheek/tree-sitter-dockerfile")))
   (dolist (entry '(("\\.go\\'"     . go-ts-mode)
                    ("go\\.mod\\'"  . go-mod-ts-mode)
                    ("go\\.sum\\'"  . go-mod-ts-mode)
                    ("\\.c\\'"      . c-ts-mode)
-                   ("\\.h\\'"      . c-ts-mode)))
+                   ("\\.h\\'"      . c-ts-mode)
+				   ("[Dd]ockerfile\\'" . dockerfile-ts-mode)))
 	(add-to-list 'auto-mode-alist entry)))
 
 ;; YASNIPPET
@@ -72,7 +75,8 @@
          (python-ts-mode . eglot-ensure)
          (js-ts-mode     . eglot-ensure)
          (html-ts-mode   . eglot-ensure)
-         (c-ts-mode      . eglot-ensure))
+         (c-ts-mode      . eglot-ensure)
+         (dockerfile-ts-mode      . eglot-ensure))
   :custom
   (eglot-autoshutdown       t)
   (eglot-events-buffer-size 0)
