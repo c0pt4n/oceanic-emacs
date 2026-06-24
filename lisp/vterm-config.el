@@ -2,9 +2,13 @@
 
 (use-package vterm
   :hook
-  (vterm-mode . (lambda ()
+  ((vterm-mode . (lambda ()
                   (setq-local confirm-kill-processes nil
                               mode-line-format nil)))
+   (vterm-copy-mode . (lambda ()
+                        (if vterm-copy-mode
+                            (meow-normal-mode 1)
+                          (meow-insert-mode 1)))))
   :init
   (setq vterm-timer-delay 0.05
 		vterm-max-scrollback 5000)
