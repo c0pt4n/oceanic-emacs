@@ -12,7 +12,8 @@
 		  (python-mode     . python-ts-mode)
 		  (yaml-mode       . yaml-ts-mode)
 		  (javascript-mode . js-ts-mode)
-		  (dockerfile-mode . dockerfile-ts-mode)))
+		  (dockerfile-mode . dockerfile-ts-mode)
+		  (nix-mode        . nix-ts-mode)))
   (setq treesit-language-source-alist
 		'((c           "https://github.com/tree-sitter/tree-sitter-c")
 		  (go          "https://github.com/tree-sitter/tree-sitter-go")
@@ -23,7 +24,8 @@
 		  (yaml        "https://github.com/ikatyang/tree-sitter-yaml")
 		  (python      "https://github.com/tree-sitter/tree-sitter-python")
 		  (javascript  "https://github.com/tree-sitter/tree-sitter-javascript" "master" "src")
-		  (dockerfile  "https://github.com/camdencheek/tree-sitter-dockerfile")))
+		  (dockerfile  "https://github.com/camdencheek/tree-sitter-dockerfile")
+		  (nix "https://github.com/nix-community/tree-sitter-nix")))
   (dolist (entry '(("\\.go\\'"     . go-ts-mode)
                    ("go\\.mod\\'"  . go-mod-ts-mode)
                    ("go\\.sum\\'"  . go-mod-ts-mode)
@@ -31,6 +33,9 @@
                    ("\\.h\\'"      . c-ts-mode)
 				   ("[Dd]ockerfile\\'" . dockerfile-ts-mode)))
 	(add-to-list 'auto-mode-alist entry)))
+
+(use-package nix-ts-mode
+  :mode "\\.nix\\'")
 
 ;; YASNIPPET
 ;; No :defer — yas-global-mode must be live before the first eglot buffer
@@ -76,7 +81,8 @@
          (js-ts-mode     . eglot-ensure)
          (html-ts-mode   . eglot-ensure)
          (c-ts-mode      . eglot-ensure)
-         (dockerfile-ts-mode      . eglot-ensure))
+         (dockerfile-ts-mode      . eglot-ensure)
+		 (nix-ts-mode    . eglot-ensure))
   :custom
   (eglot-autoshutdown       t)
   (eglot-events-buffer-size 0)
