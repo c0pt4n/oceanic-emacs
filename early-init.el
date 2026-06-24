@@ -4,6 +4,13 @@
 
 (add-to-list 'default-frame-alist '(alpha-background . 90))
 
+;;; UI
+(when (fboundp 'tool-bar-mode)
+  (tool-bar-mode -1))
+(when (fboundp 'scroll-bar-mode)
+  (scroll-bar-mode -1))
+(menu-bar-mode -1)
+
 ;; UTF-8
 (set-language-environment "UTF-8")
 (set-charset-priority 'unicode)
@@ -40,3 +47,4 @@
 (set-face-background 'mouse "#ffffff")
 
 (setq native-comp-async-report-warnings-errors 'silent)
+;;; early-init.el ends here

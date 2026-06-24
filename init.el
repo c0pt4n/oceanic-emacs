@@ -75,11 +75,6 @@
 		gcmh-high-cons-threshold (* 16 1024 1024))
   (gcmh-mode 1))
 
-(when (fboundp 'tool-bar-mode)
-  (tool-bar-mode -1))
-(when (fboundp 'scroll-bar-mode)
-  (scroll-bar-mode -1))
-(menu-bar-mode -1)
 (blink-cursor-mode -1)
 (dolist (hook '(prog-mode-hook text-mode-hook conf-mode-hook))
   (add-hook hook #'display-line-numbers-mode))
