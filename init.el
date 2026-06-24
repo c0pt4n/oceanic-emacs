@@ -113,7 +113,7 @@
   :config
   (setq recentf-max-menu-items 25
 		recentf-max-saved-items 100)
-  (dolist (path '("\\.git/" "/tmp/" "/nix/store/"))
+  (dolist (path '("\\.git/" "/tmp/" "/nix/store/" "\\.gpg/"))
 	(add-to-list 'recentf-exclude path))
   (add-to-list 'recentf-exclude (recentf-expand-file-name no-littering-var-directory))
   (add-to-list 'recentf-exclude (recentf-expand-file-name no-littering-etc-directory))
