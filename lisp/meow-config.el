@@ -19,8 +19,10 @@
    ;; Buffers
    '("," . consult-buffer)
    '("b k" . kill-current-buffer)
+   '("b l" . (lambda () (interactive) (switch-to-buffer nil)))
    '("b b" . switch-to-buffer)
    '("b n" . next-buffer)
+   '("b p" . previous-buffer)
    '("b i" . ibuffer)
    '("b r" . revert-buffer)
 
