@@ -55,6 +55,9 @@
    '("o T" . vterm)
    '("o d" . dirvish)
 
+   ;; Password-store
+   '("p p" . pass)
+
    ;; Org
    '("C" . org-capture)
    '("n r i" . org-roam-capture)
