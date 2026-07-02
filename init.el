@@ -94,6 +94,7 @@
 	  native-comp-async-report-warnings-errors 'silent ;; Native Comp
 	  use-short-answers t)
 
+(setq tab-always-indent 'complete)
 (setq-default truncate-lines t
 			  indent-tabs-mode nil
 			  tab-width 4
