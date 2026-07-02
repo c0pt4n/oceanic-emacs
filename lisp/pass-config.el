@@ -1,6 +1,8 @@
 ;;; pass-config.el --- password-store in Emacs -*- lexical-binding: t; -*-
 
 (use-package pass
+  :bind (:map pass-mode-map
+              ("W" . pass-copy-field))
   :config
   (add-to-list 'display-buffer-alist
                '("\\*Password-Store\\*"
