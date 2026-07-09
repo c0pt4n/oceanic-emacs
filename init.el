@@ -139,12 +139,6 @@
 (add-to-list 'load-path (expand-file-name "lisp/" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "lisp/custom/" user-emacs-directory))
 
-(defvar is-android-env
-  (or (eq system-type 'android)
-      (string-match-p "android" system-configuration)
-      (getenv "TERMUX_VERSION"))
-  "Non-nil if running on Android/Termux.")
-
 (require 'meow-config)
 (require 'flash-config)
 (require 'dashboard)
@@ -166,7 +160,7 @@
 ;; (require 'workspaces)
 (require 'emms-config)
 
-(unless is-android-env
+(when (eq system-type 'gnu/linux)
   (require 'pdf-setup)
   (require 'pass-config)
   (require 'llms)
